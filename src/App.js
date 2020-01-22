@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import axios from "axios";
+import api from "./services/api";
 
 import "./global.css";
 import "./App.css";
@@ -12,14 +12,14 @@ function App() {
 
   useEffect(() => {
     async function loadDevs(){
-      const response = await axios.get("/devs");
+      const response = await api.get("/devs");
       setDevs(response.data);
     }
     loadDevs();
   }, []);
 
   async function handleAddDev(dev){
-    const response = await axios.post("/devs", dev);
+    const response = await api.post("/devs", dev);
   }
 
   return (
