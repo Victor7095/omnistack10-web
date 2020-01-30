@@ -17,6 +17,11 @@ aside form{
     margin-top: 30px;
 }
 
+aside form .input-block {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
 aside form .input-block + .input-block {
     margin-top: 20px;
 }
@@ -46,7 +51,17 @@ aside form .input-block input{
     font-size: 14px;
     color: #666;
     border: 0;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #ddd;
+    transition: border 0.5s;
+}
+
+aside form .input-block input:focus{
+    border-bottom: 1px solid #7d40e7;
+}
+
+aside form .input-block input:focus + label{
+    color: #7d40e7;
+    transition: color 0.5s;
 }
 
 aside form button[type=submit]{

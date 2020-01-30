@@ -40,17 +40,16 @@ function Sidebar({onSubmit}){
       <strong>Cadastrar</strong>
       <form>
         <div className="input-block">
-          <label htmlFor="github_username">Usuário do Github</label>
           <input 
             value={github_username}
             onChange={e => setGithubUsername(e.target.value)} 
             name="github_username" 
             id="github_username" 
             required></input>
+          <label htmlFor="github_username">Usuário do Github</label>
         </div>
           
         <div className="input-block">
-          <label htmlFor="techs">Tecnologias</label>
           <input
             value={techs}
             onChange={e => setTechs(e.target.value)} 
@@ -58,11 +57,11 @@ function Sidebar({onSubmit}){
             id="techs"
             required>
           </input>
+          <label htmlFor="techs">Tecnologias</label>
         </div>
 
         <div className="input-group">
           <div className="input-block">
-            <label htmlFor="latitude">Latitude</label>
             <input 
               value={latitude}
               onChange={e => setLatitude(e.target.value)} 
@@ -71,10 +70,10 @@ function Sidebar({onSubmit}){
               id="latitude"
               required>
             </input>
+            <label htmlFor="latitude">Latitude</label>
           </div>
           
           <div className="input-block">
-            <label htmlFor="longitude">Longitude</label>
             <input
               value={longitude}
               onChange={e => setLongitude(e.target.value)} 
@@ -83,6 +82,7 @@ function Sidebar({onSubmit}){
               id="longitude"
               required>
             </input>
+            <label htmlFor="longitude">Longitude</label>
           </div>
         </div>
 
